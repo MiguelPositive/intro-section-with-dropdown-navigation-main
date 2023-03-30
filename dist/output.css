@@ -1258,7 +1258,7 @@ video {
   }
 
   .\39 00px\:bg-imageBgDesktop {
-    background-image: url("./images/image-hero-desktop.png");
+    background-image: url("../images/image-hero-desktop.png");
   }
 
   .\39 00px\:bg-cover {
