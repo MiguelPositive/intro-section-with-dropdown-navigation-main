@@ -4,16 +4,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        logoNav: "url('/images/logo.svg')",
-        logoButtonnMenu: "url(/images/icon-menu.svg)",
-        logoClose: "url(/images/icon-close-menu.svg)",
-        imageBgMobile: "url('/images/image-hero-mobile.png')",
-        imageBgDesktop: "url('/images/image-hero-desktop.png')",
-        clientDatabiz: "url('/images/client-databiz.svg')",
-        audioFile: "url('/images/client-audiophile.svg')",
-        meet: "url('/images/client-meet.svg')",
-        marker: "url('/images/client-maker.svg')",
-        todoList: "url('images/icon-todo.svg')",
+        logoNav: "url('./images/logo.svg')",
+        logoButtonnMenu: "url(./images/icon-menu.svg)",
+        logoClose: "url(./images/icon-close-menu.svg)",
+        imageBgMobile: "url('./images/image-hero-mobile.png')",
+        imageBgDesktop: "url('./images/image-hero-desktop.png')",
+        clientDatabiz: "url('./images/client-databiz.svg')",
+        audioFile: "url('./images/client-audiophile.svg')",
+        meet: "url('./images/client-meet.svg')",
+        marker: "url('./images/client-maker.svg')",
+        todoList: "url('./images/icon-todo.svg')",
       },
       fontFamily: {
         Epilogue: "'Epilogue', sans-serif",
