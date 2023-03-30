@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- <link href="/dist/input.css" rel="stylesheet" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body class="font-Epilogue h-screen">
+    <nav
+      class="h-[calc(2.5rem+0.5em)] w-full flex justify-between items-center pl-[calc(1rem+0.5em)] pr-[calc(1rem+0.5em)] relative overflow-hidden 900px:overflow-visible 900px:static 900px:h-[40vh]"
+    >
+      <div
+        id="logo-web"
+        class="logo-nav w-[calc(5rem+0.5em)] h-[calc(1rem+0.5em)] bg-logoNav bg-cover 900px:-mt-52"
+      ></div>
+      <div
+        id="btn-menu"
+        class="bg-logoButtonnMenu bg-cover h-[calc(0.8rem+0.5em)] w-[calc(1.5rem+0.5em)] cursor-pointer 900px:hidden"
+      ></div>
+
+      <div
+        id="menu-container"
+        class="absolute flex flex-wrap items-start top-0 -right-full w-[85%] h-[100vh] text-black bg-white p-5 overflow-hidden 900px:static 900px:flex-nowrap 900px:w-full 900px:p-0 900px:h-full 900px:z-20"
+      >
+        <div
+          class="container-close w-full flex justify-end items-center 900px:hidden"
+        >
+          <div
+            id="btn-close"
+            class="close h-[calc(1rem+0.5em)] w-[calc(1rem+0.5em)] bg-logoClose bg-cover cursor-pointer"
+          ></div>
+        </div>
+
+        <div
+          class="menu flex flex-col absolute top-20 900px:static 900px:w-full 900px:flex-row 900px:items-center 900px:justify-start"
+        >
+          <details
+            class="relative flex justify-center items-center cursor-pointer 900px:ml-20"
+          >
+            <summary
+              id="features"
+              class="list-none mb-4 opacity-80 900px:flex 900px:justify-center 900px:items-center"
+            >
+              Features
+              <i class="bi bi-chevron-down ml-5 w-10 h-10 900px:mt-4"></i>
+            </summary>
+            <div
+              id="list-features"
+              class="ml-10 900px:absolute 900px:bg-white 900px:shadow-lg 900px:rounded-lg 900px:-left-[calc(5rem+0.5em)] top-12 900px:w-[calc(9rem+0.5em)] 900px:h-[calc(11rem+0.5em)] 900px:pt-4 900px:-pl-1"
+            >
+              <div
+                id="item-todo-list"
+                class="flex justify-center items-center mb-4"
+              >
+                <div class="mr-4 flex justify-center items-center">
+                  <svg
+                    width="14"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 3v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h1V1a1 1 0 1 1 2 0v1h2V1a1 1 0 1 1 2 0v1h2V1a1 1 0 0 1 2 0v1h1a1 1 0 0 1 1 1Zm-2 3H2v1h10V6Zm0 3H2v1h10V9Zm0 3H2v1h10v-1Z"
+                      fill="#726CEE"
+                    />
+                  </svg>
+                </div>
+                <div class="opacity-80">Todo List</div>
+              </div>
+
+              <div
+                id="item-calendar"
+                class="flex justify-center items-center mb-5"
+              >
+                <div class="mr-4 flex justify-center items-center">
+                  <svg
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.667 8.667h-4v4h4v-4ZM11.334 0v1.333H4.667V0h-2v1.333h-1C.75 1.333 0 2.083 0 3v11.333C0 15.25.75 16 1.667 16h12.667C15.25 16 16 15.25 16 14.333V3c0-.917-.75-1.667-1.666-1.667h-1V0h-2Zm3 14.333H1.667V5.5h12.667v8.833Z"
+                      fill="#4BB1DA"
+                    />
+                  </svg>
+                </div>
+                <div class="opacity-80">Calendar</div>
+              </div>
+
+              <div
+                id="item-reminders"
+                class="flex justify-center items-center mb-5"
+              >
+                <div class="mr-4 flex justify-center items-center">
+                  <svg
+                    class="ml-3"
+                    width="13"
+                    height="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.408 13.916c-3.313 0-6-1.343-6-3 0-.612.371-1.18 1-1.654V7.916a5 5 0 0 1 3.041-4.6 2 2 0 0 1 3.507-1.664 2 2 0 0 1 .411 1.664 5.002 5.002 0 0 1 3.041 4.6v1.346c.629.474 1 1.042 1 1.654 0 1.657-2.687 3-6 3Zm0 1c.694 0 1.352-.066 1.984-.16.004.054.016.105.016.16a2 2 0 0 1-4 0c0-.055.012-.106.016-.16.633.094 1.29.16 1.984.16Z"
+                      fill="#EDD556"
+                    />
+                  </svg>
+                </div>
+                <div class="opacity-80">Reminders</div>
+              </div>
+
+              <div
+                id="item-planning"
+                class="flex justify-center items-center -ml-1 mb-5"
+              >
+                <div class="mr-3 flex justify-center items-center">
+                  <svg
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Zm0 2.133a5.867 5.867 0 1 0 0 11.734A5.867 5.867 0 0 0 8 2.133ZM8 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm-.533 2.667a.533.533 0 0 0-.534.533v2.133c0 .295.24.534.534.534h3.2a.533.533 0 0 0 0-1.067H8V6.4a.533.533 0 0 0-.533-.533Z"
+                      fill="#8E4CB6"
+                    />
+                  </svg>
+                </div>
+                <div class="opacity-80">Planning</div>
+              </div>
+            </div>
+          </details>
+
+          <details class="flex justify-between items-center cursor-pointer">
+            <summary
+              class="list-none mb-4 opacity-80 900px:flex 900px:justify-center 900px:items-center"
+            >
+              Company
+              <i class="bi bi-chevron-down ml-4"></i>
+            </summary>
+
+            <div
+              id="list-calendar"
+              class="ml-10 900px:absolute 900px:bg-white 900px:shadow-lg 900px:rounded-lg 900px:left-[calc(17rem+0.5em)] top-12 900px:w-[calc(6rem+0.5em)] 900px:h-[calc(9rem+0.5em)] 900px:pt-4 900px:pl-4"
+            >
+              <div class="opacity-80 mb-5">History</div>
+              <div class="opacity-80 mb-5">Our Team</div>
+              <div class="opacity-80 mb-5">History</div>
+            </div>
+          </details>
+          <div
+            class="mb-4 opacity-80 900px:flex 900px:justify-center 900px:items-center 900px:ml-4"
+          >
+            <a href="#">Careers</a>
+            <div></div>
+          </div>
+          <div
+            class="opacity-80 mb-5 flex 900px:justify-center 900px:items-center 900px:ml-5 900px:mt-1"
+          >
+            <a href="#">About</a>
+          </div>
+
+          <div
+            class="mb-5 opacity-80 text-left flex justify-start items-center w-[calc(5rem+0.5em)] 900px:mt-1 900px:ml-[calc(7rem+0.5em)] 1000px:ml-[calc(10rem+0.5em)] 1050px:ml-[15rem] 1100px:ml-[17rem] 1150px:ml-[20rem] 1200px:ml-[23rem] 1250px:ml-[26rem] 1300px:ml-[29rem] 1350px:ml-[33rem] 1400px:ml-[36rem]"
+          >
+            <a href="#" class="text-center">Login</a>
+          </div>
+
+          <div
+            class="opacity-80 w-[200%] text-center flex justify-start items-center 350px:w-[245%] 900px:w-[100%] 900px:h-full 900px:ml-8 950px:w-[50%]"
+          >
+            <div
+              class="w-[50%] h-9 rounded-2xl border-2 border-black/80 cursor-pointer flex justify-center items-center 900px:-mt-4 900px:w-[80%] 900px:h-[calc(2rem+0.5em)] 950px:w-[7rem]"
+            >
+              <a href="#" class="">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="relative">
+      <div
+        id="backdrop"
+        class="absolute -top-20 w-full min-h-[100vh] bg-black opacity-0 -z-10 465px:h-[110vh] 900px:hidden"
+      ></div>
+
+      <div
+        id="menu-content"
+        class="grid grid-cols-1 grid-row-4 gap-10 overflow-hidden 900px:flex 900px:flex-row-reverse 900px:gap-0 900px:-ml-[clamp(50vw,95vw,85vw)]"
+      >
+        <div
+          class="bg-imageBgMobile bg-cover w-screen h-[calc(15rem+0.5em)] mt-8 350px:h-[calc(17rem+0.5em)] 450px:bg-contain 465px:h-[calc(19rem+0.5em)] 520px:h-[calc(21rem+0.5em)] 588px:bg-cover 588px:w-[70vw] 588px:h-[calc(19rem+0.5em)] 588px:ml-[calc(5.1rem+0.5em)] 588px:mt-[calc(3rem+0.5em)] 650px:h-[calc(21rem+0.5em)] 700px:h-[calc(23rem+0.5em)] 700px:w-[72vw] 750px:ml-[calc(9rem+0.5em)] 750px:w-[60vw] 750px:h-[calc(21rem+0.5em)] 800px:w-[55vw] 800px:h-[calc(18rem+0.5em)] 800px:ml-[calc(10rem+0.5em)] 862px:h-[calc(16rem+0.5em)] 862px:w-[61.5vw] 900px:bg-imageBgDesktop 900px:bg-cover 900px:absolute 900px:z-40 900px:w-[clamp(23vw,43vw,38vw)] 900px:h-[clamp(45vw,60vw,50vw)] 900px:-top-[clamp(11vw,23vw,18vw)] 900px:left-[clamp(33vw,48vw,38vw)]"
+        ></div>
+
+        <div
+          class="grid grid-cols-1 grid-rows-2 gap-6 900px:w-[50%] 900px:absolute 900px:right-[clamp(20vw,50vw,40vw)]"
+        >
+          <div id="text">
+            <h1
+              class="text-center text-[calc(1.3rem+0.5em)] font-bold 900px:text-left 900px:text-[clamp(3vw,8vw,5vw)] 900px:mb-[clamp(1vw,3vw,2vw)]"
+            >
+              Make
+              <span
+                class="900px:block 900px:text-left 900px:-mt-[clamp(1vw,3vw,2vw)]"
+                >Remote Work</span
+              >
+            </h1>
+            <p
+              class="text-center opacity-50 pr-1 pl-1 text-[calc(0.4rem+0.5em)] 400px:w-[95%] 445px:w-[90%] 445px:ml-[5%] 650px:w-[80%] 650px:ml-[10%] 850px:w-[50%] 850px:ml-[25%] 900px:text-justify 900px:w-[50%] 900px:ml-0"
+            >
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+
+          <div
+            class="container-btnButton flex justify-center items-center mb-[calc(2rem+0.5em)] 900px:justify-start 900px:-mt-[clamp(3vw,9vw,6vw)]"
+          >
+            <div
+              id="btnLearnMore"
+              class="w-[50%] h-5 bg-black rounded-[calc(0.3rem+0.5em)] text-white text-center flex justify-center items-center p-5 cursor-pointer transition-all duration-300 900px:hover:bg-white 900px:hover:text-black 900px:hover:border-black 900px:hover:border-[1px] 900px:hover:font-bold"
+            >
+              Learn more
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="900px:absolute 900px:w-screen 900px:top-[clamp(70vw,90vw,80vw)] 970px:top-[clamp(50vw,70vw,60vw)]"
+    >
+      <div id="items-footer" class="sponsors flex justify-evenly items-center">
+        <div
+          class="w-[calc(4rem+0.5em)] h-[calc(0.4rem+0.5em)] bg-clientDatabiz bg-contain"
+        ></div>
+
+        <div
+          class="w-[calc(2.45rem+0.5em)] h-[calc(1rem+0.5em)] bg-audioFile bg-contain"
+        ></div>
+
+        <div
+          class="w-[calc(2.9rem+0.5em)] h-[calc(0.3rem+0.5em)] bg-meet bg-contain"
+        ></div>
+
+        <div
+          class="w-[calc(2.9rem+0.5em)] h-[calc(0.5rem+0.5em)] bg-marker bg-contain"
+        ></div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
